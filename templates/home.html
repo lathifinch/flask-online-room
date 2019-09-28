@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h2>Welcome to Finroom ~</h2>
+<p>You are free to enter the room! You are free to type what you want! There is no rules! Enter your name and what animal you are to enter the room ~</p>
+<hr>
+
+<form action="/finroom" method="post">
+    <input type="text" placeholder="Your name" name="name">
+    <select name="animal">
+        <option disabled selected value="">Animal</option>
+        <option value="Cat">Cat</option>
+        <option value="Dog">Dog</option>
+        <option value="Snake">Snake</option>
+        <option value="Lion">Lion</option>
+        <option value="Bird">Bird</option>
+        <option value="Monkey">Monkey</option>
+        <option value="Fish">Fish</option>
+        <option value="Butterfly">Butterfly</option>
+    </select>
+    <input type="submit" value="Enter">
+</form>
+
+{% endblock %}

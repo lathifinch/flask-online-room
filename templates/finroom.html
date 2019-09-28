@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h2>~ Finroom ~</h2>
+
+<form action="/finroom" method="post">
+    <input type="text" placeholder="Type something" name="chat">
+    <input type="submit" value="Post">
+</form>
+
+<h3>
+    <a href="/logout">Logout</a> <br>
+    <a href="/finroom">Refresh</a>
+</h3>
+
+<ul>
+    {% for chat in chats %}
+    <li>
+        <hr>
+        <p>A <b>{{ chat[1] }}</b> named <b>{{ chat[0] }}</b> said..</p>
+        <p>{{ chat[2] }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
